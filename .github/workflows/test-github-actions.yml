@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Hello World Action step
         id: hello
-        uses: actions/hello-world-docker-action@v1
+        uses: wcyn/hello-world-docker-action@v1
         with:
           who-to-greet: "Monica"
       # Use the output from the `hello` step
