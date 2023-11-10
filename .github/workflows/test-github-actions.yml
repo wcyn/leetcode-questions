@@ -11,3 +11,15 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+  hello-world-job:
+    runs-on: ubuntu-latest
+    name: Hello World Job
+    steps:
+      - name: Hello World Action step
+        id: hello
+        uses: actions/hello-world-docker-action@v1
+        with:
+          who-to-greet: "Monica"
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time of the hellon step was ${{ steps.hello.outputs.time }}"
