@@ -17,9 +17,10 @@ jobs:
     steps:
       - name: Hello World Action step
         id: hello
-        uses: wcyn/hello-world-docker-action@v0.1.0
+        uses: wcyn/hello-world-composite-action@main
         with:
-          who-to-greet: "Monica"
+          who-to-greet: "Monica_Composite_Test"
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time of the hello step was ${{ steps.hello.outputs.time }}"
+      - name: Get the random number
+        run: echo random-number ${{ steps.hello.outputs.random-number }}
+        shell: bash
