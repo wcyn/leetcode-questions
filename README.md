@@ -1,2 +1,2 @@
-# leetcode-questions
+# Leetcode Questions
 Collection of medium-hard leetcode solutions 
